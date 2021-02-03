@@ -22,6 +22,7 @@
 @endforeach
     </ul>
 
+    {{-- テスト用 --}}
     <h2>カテゴリ一覧</h2>
     <ul>
 @foreach ($categorys as $category)

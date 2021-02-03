@@ -6,6 +6,15 @@
     <title>店舗一覧</title>
 </head>
 <body>
+    <form action="/list" method="post">
+        @csrf
+        <button type="submit">今日のお店を決める</button>
+    </form>
+
+    @if (isset($today_store))
+        <p><a href="{{$today_store->url}}">{{$today_store->name}}</a>はいかがですか？</p>
+    @endif
+
     <h1>店舗一覧</h1>
     <ul>
 @foreach ($stores as $store)

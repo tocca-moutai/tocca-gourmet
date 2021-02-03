@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // お店一覧
-Route::get('/', 'gourmet_list\GourmetListController@index')->name("");
+Route::get('/list', 'gourmet_list\GourmetListController@index')->name("");
 
 // お店編集
 Route::get('/edit/{ID}', 'gourmet_edit\GourmetEditController@index')->name("");

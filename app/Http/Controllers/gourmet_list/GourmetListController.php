@@ -22,4 +22,11 @@ class GourmetListController extends Controller
         $stores = StoreList::getStoreListCategory();
         return view('gourmet_list.index', compact('categorys', 'stores'));
     }
+
+    /**
+     * 店舗一覧画面 お店自動選択機能
+     */
+    public function generate() {
+        
+    }
 }

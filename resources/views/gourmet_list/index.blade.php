@@ -8,6 +8,13 @@
 <body>
     <form action="/list" method="post">
         @csrf
+        カテゴリを選択してください
+        <select name="generate">
+            <option value=""></option>
+@foreach ($categorys as $category)
+            <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+@endforeach
+        </select>
         <button type="submit">今日のお店を決める</button>
     </form>
 
@@ -19,14 +26,6 @@
     <ul>
 @foreach ($stores as $store)
         <li><a href="{{ $store->store_url }}">{{ $store->store_name }}</a></li>
-@endforeach
-    </ul>
-
-    {{-- テスト用 --}}
-    <h2>カテゴリ一覧</h2>
-    <ul>
-@foreach ($categorys as $category)
-        <li>{{ $category->category_name }}</li>
 @endforeach
     </ul>
 </body>
